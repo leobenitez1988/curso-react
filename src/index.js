@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// Prueba normal
+// const element = document.createElement('h1');
+// element.innerText = 'Hello World!';
+// const container = document.getElementById('root');
+// container.appendChild(element);
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// Ahora vamos a usar react
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const user = {
+  firstName: 'Leo',
+  lastName: 'Benítez',
+  avatar: 'https://i.pinimg.com/originals/e9/57/2a/e9572a70726980ed5445c02e1058760b.png'
+};
+
+function getName (user){
+  if(user){
+    return `${user.firstName} ${user.lastName}`
+  }
+  return 'Stranger';
+};
+
+const element = (
+  <div>
+    <h1>{getName(user)}</h1>
+    <img src={user.avatar}></img>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const container = document.getElementById('root')
+
+ReactDOM.render(element, container)
