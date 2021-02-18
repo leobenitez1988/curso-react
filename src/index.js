@@ -1,10 +1,3 @@
-// Prueba normal
-// const element = document.createElement('h1');
-// element.innerText = 'Hello World!';
-// const container = document.getElementById('root');
-// container.appendChild(element);
-
-// Ahora vamos a usar react
 import React from 'react'
 import ReactDOM from 'react-dom'
 
